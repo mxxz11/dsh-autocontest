@@ -29,7 +29,7 @@ dsh plugin add https://github.com/mxxz11/dsh-autocontest.git
 ```
 
 **卸载 ⚠️ 注意：使用插件包名 dsh‑autoconsent，不是仓库名！**
-```bash
+
 ```
 dsh plugin remove dsh-autoconsent
 ```
@@ -57,8 +57,7 @@ dsh plugin remove dsh-autoconsent
 
 ## 🛡️ 权限风险提示
 
-插件会接管审批流，自动通过代码执行、文件读写申请。
-使用者需要自行承担安全风险，开启前请确认理解风险。
+插件会接管审批流，自动通过代码执行、文件读写申请。使用者需要自行承担安全风险，开启前请确认理解风险。
 
 ## 📄 许可证
 
