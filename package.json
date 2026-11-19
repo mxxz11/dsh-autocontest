@@ -1,54 +1,32 @@
 {
   "name": "dsh-autoconsent",
   "version": "1.1.0",
-  "description": "Task-scoped consent for DeepSeek Harness: one-click auto-approve plus high-risk shell blacklist, per-session quotas, goal contract, shadow snapshots, presence downgrade and an audit bundle.",
-  "author": "mzh",
+  "author": "mxxz11",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mzh/dsh-autoconsent.git"
-  },
-  "homepage": "https://github.com/mzh/dsh-autoconsent",
-  "bugs": {
-    "url": "https://github.com/mzh/dsh-autoconsent/issues"
-  },
-  "type": "module",
   "main": "./lib/index.js",
   "exports": {
     ".": "./lib/index.js",
-    "./client": "./client.js",
-    "./package.json": "./package.json"
-  },
-  "files": [
-    "lib",
-    "client.js",
-    "cordis.patch.yml",
-    "README.md",
-    "panel.png",
-    "LICENSE"
-  ],
-  "keywords": [
-    "dsh",
-    "dsh-plugin",
-    "deepseek-harness",
-    "approval",
-    "auto-approve",
-    "permissions"
-  ],
-  "engines": {
-    "node": ">=20"
-  },
-  "meta": {
-    "title": "AutoConsent",
-    "description": "任务边界管控版自动审批：一键放行 + 高危黑名单、会话配额、任务契约、影子快照与审计日志。"
+    "./client": "./client.js"
   },
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
     },
     "client": {
-      "platform": "web",
-      "immediately": true
+      "platform": "web"
+    },
+    "marketplace": {
+      "profiles": ["web","desktop"],
+      "requiresRestart": true,
+      "requiresBuildApproval": false
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mxxz11/dsh-autocontest.git"
+  },
+  "homepage": "https://github.com/mxxz11/dsh-autocontest",
+  "bugs": {
+    "url": "https://github.com/mxxz11/dsh-autocontest/issues"
   }
 }
