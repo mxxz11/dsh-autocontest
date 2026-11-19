@@ -1,4 +1,3 @@
-```
 # AutoConsent - dsh‑autocontest
 > 任务边界管控版自动审批插件，为 DeepSeek Harness 提供【一键自动放行 + 边界规则管控】
 
@@ -23,19 +22,13 @@ GitHub仓库名称：`dsh‑autocontest`
 - 完整审计日志，每条裁决带哈希链，区分自动放行 / 人工审批 / 拒绝拦截
 
 ## 📦 安装 & 卸载
+
 **安装（使用仓库Git地址）**
-```
-
-dsh plugin add [https://github.com/mxxz11/dsh-autocontest.git](https://github.com/mxxz11/dsh-autocontest.git)
-
-```
+`dsh plugin add https://github.com/mxxz11/dsh-autocontest.git`
 
 **卸载 ⚠️ 注意：使用插件包名 dsh‑autoconsent，不是仓库名！**
-```
+`dsh plugin remove dsh-autoconsent`
 
-dsh plugin remove dsh-autoconsent
-
-```
 卸载完成后自动放行逻辑完全失效，重启DSH不会自动恢复插件。
 
 ## ⚙️ 配置项（cordis.patch.yml / 面板可视化配置）
@@ -58,4 +51,3 @@ dsh plugin remove dsh-autoconsent
 
 ## 📄 许可证
 MIT
-```
