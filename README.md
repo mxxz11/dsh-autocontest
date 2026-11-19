@@ -17,6 +17,5 @@
 
 ## 📦 安装
 ```bash
-dsh plugin add https://github.com/mxxz11/
-dsh-autocontest.git
+dsh plugin add https://github.com/mxxz11/dsh-autocontest.git
 
