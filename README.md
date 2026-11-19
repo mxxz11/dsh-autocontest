@@ -24,41 +24,38 @@ GitHub仓库名称：`dsh‑autocontest`
 
 ## 📦 安装 & 卸载
 **安装（使用仓库Git地址）**
-```bash
-dsh plugin add https://github.com/mxxz11/dsh-autocontest.git
+```
+
+dsh plugin add [https://github.com/mxxz11/dsh-autocontest.git](https://github.com/mxxz11/dsh-autocontest.git)
+
 ```
 
 **卸载 ⚠️ 注意：使用插件包名 dsh‑autoconsent，不是仓库名！**
-
 ```
+
 dsh plugin remove dsh-autoconsent
+
 ```
+卸载完成后自动放行逻辑完全失效，重启DSH不会自动恢复插件。
 
-卸载完成后自动放行逻辑完全失效，重启 DSH 不会自动恢复插件。
-
-## ⚙️ 配置项（cordis.patch.yml/ 面板可视化配置）
-
+## ⚙️ 配置项（cordis.patch.yml / 面板可视化配置）
 - 高危黑名单配置
 - 分组开关控制
 - 配额上限设置
 - 裁决规则自定义
 
 ## 📌 已知限制
-
 1. **带空格的文件路径**：契约允许路径包含空格时会出现解析异常，可能发生误拦截，尽量避免路径带空格，该问题会在后续版本修复。
-2. 旧版本残留配置升级：如果从 v1.0 升级，旧的 settings.json 会保留旧黑名单；可以在面板点击【清零重置】恢复内置完整默认黑名单。
+2. 旧版本残留配置升级：如果从v1.0升级，旧的settings.json会保留旧黑名单；可以在面板点击【清零重置】恢复内置完整默认黑名单。
 
 ## 🛠️ 常见故障（Windows）
-
-> 
 > `ERR_PNPM_EPERM` 重命名权限报错
-> 原因：本地 node_modules 存在旧版本软链残留。
-> 解决：删除 `node_modules` 内旧的 `dsh‑autoconsent` 残留文件夹 / 软链，重新执行安装命令。
+原因：本地node_modules存在旧版本软链残留。
+解决：删除 `node_modules` 内旧的 `dsh‑autoconsent` 残留文件夹/软链，重新执行安装命令。
 
 ## 🛡️ 权限风险提示
-
 插件会接管审批流，自动通过代码执行、文件读写申请。使用者需要自行承担安全风险，开启前请确认理解风险。
 
 ## 📄 许可证
-
 MIT
+```
