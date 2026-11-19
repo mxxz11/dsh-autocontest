@@ -1,0 +1,31 @@
+# dsh-autoconsent bundle patch — one Host row.
+# The row name equals the package name, so a public marketplace install
+# resolves it directly without any local scope prefix.
+- insert:
+    - id: dsh-autoconsent
+      name: 'dsh-autoconsent'
+      config:
+        # 插件加载即开启一键自动放行（面板里可随时关闭）
+        autoEnable: true
+        # 角色模板：solo（个人开发）/ audit（严格审计）/ intern（实习生权限）
+        template: solo
+        # 子 Agent 默认隔离：父会话放行不外溢
+        subagentPolicy: isolate
+        # 在场降权：你在操作电脑时中等风险分类改人工确认
+        presenceEnabled: false
+        presenceWindowMs: 90000
+        presenceRisk:
+          - shell
+          - plugin
+        # 自述与动作校验（启发式）
+        planCheck: false
+        # 每轮结束重置配额
+        resetEachTurn: true
+        snapshots: true
+        showProbe: true
+        # 面板「更新日志」跳转的仓库地址
+        repoUrl: https://github.com/mzh/dsh-autoconsent
+        pollSeconds: 3
+        position:
+          top: 50
+          right: 14
