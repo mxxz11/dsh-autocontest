@@ -6,14 +6,16 @@
   "main": "./lib/index.js",
   "exports": {
     ".": "./lib/index.js",
-    "./client": "./client.js"
+    "./client": "./client.js",
+    "./package.json": "./package.json"
   },
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
     },
     "client": {
-      "platform": "web"
+      "platform": "web",
+      "immediately": true
     },
     "marketplace": {
       "profiles": ["web","desktop"],
